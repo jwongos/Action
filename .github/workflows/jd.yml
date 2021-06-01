@@ -246,9 +246,6 @@ jobs:
           done
           
           docker exec jd bash git_pull
-          echo "Waiting for 5 seconds..."
-          sleep 5
-          docker exec jd /bin/sh -c 'mv /jd/config/config.sh /jd/config/config.sh.bak'
           docker cp ./config.sh jd:/jd/config/config.sh
 
           #echo "Waiting for 60 seconds..."
